@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <title>Google Classroom</title>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="leftNav">
+        <span class="material-symbols-outlined"> menu </span>
+        <span class="material-symbols-outlined"> image </span>
+        <p>Classroom</p>
+      </div>
+      <div class="rightNav">
+        <span class="material-symbols-outlined addClassroom"> add </span>
+        <span class="material-symbols-outlined"> apps </span>
+        <span
+          class="material-symbols-outlined"
+          onclick="generateSidebarClass()"
+        >
+          account_circle
+        </span>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="topSidebarIcons">
+        <div class="iconContainer">
+          <span class="material-symbols-outlined sidebarIcons"> home </span>
+          <p>Home</p>
+        </div>
+
+        <div class="iconContainer">
+          <span class="material-symbols-outlined sidebarIcons">
+            calendar_today
+          </span>
+          <p>Calendar</p>
+        </div>
+      </div>
+
+      <div class="middleSidebarIcons">
+        <div class="classIcon">
+          <span class="material-symbols-outlined arrowRight">
+            arrow_right
+          </span>
+
+          <div class="iconContainer">
+            <span class="material-symbols-outlined sidebarIcons"> school </span>
+            <p>Enrolled</p>
+          </div>
+        </div>
+        <div class="enrolledClass">
+          <ul id="sidebarEnrolledClass">
+            <li id="sidebarEnrolledList">
+              <div class="sidebarClassIcon">P</div>
+              <div class="label">
+                <p class="sidebarClassName">Programming (Java) NC III</p>
+                <p class="sidebarClassSchedule">
+                  T2 - JAVA-TWSP2023-B03 6 to 10pm
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottomSidebarIcons">
+        <div class="iconContainer">
+          <span class="material-symbols-outlined sidebarIcons"> archive </span>
+          <p>Archived Classes</p>
+        </div>
+
+        <div class="iconContainer">
+          <span class="material-symbols-outlined sidebarIcons"> settings </span>
+          <p>Settings</p>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="classroomContainer">
+        <div class="classroom">
+          <span class="material-symbols-outlined moreVert"> more_vert </span>
+
+          <div class="classroomHeading">
+            <div class="classroomHeadingContent">
+              <img src="./src/img/profile.jpg" class="accProfile" alt="" />
+              <div class="classHeader">
+                <p class="className">Programming (Java) NC III</p>
+                <p class="classSchedule">T2 - JAVA-TWSP2023-B03 6 to 10pm</p>
+              </div>
+              <p class="classInstructor">Tampipi, Neo</p>
+            </div>
+          </div>
+
+          <div class="classroomFooter">
+            <span class="material-symbols-outlined">
+              perm_contact_calendar
+            </span>
+            <span class="material-symbols-outlined"> folder </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hiddenContents">
+      <div class="classroomGeneratorFormat">
+        <span
+          class="material-symbols-outlined closeClassroomGenerator"
+          onclick="closeClassroomGenerator()"
+        >
+          close
+        </span>
+        <label for="className">Enter Class Name</label>
+        <input type="text" id="className" />
+
+        <label for="classSchedule">Enter Schedule</label>
+        <input type="text" id="classSchedule" />
+        <label for="classInstructor">Enter Instructor Name</label>
+        <input type="text" id="classInstructor" />
+        <div class="themePicker">
+          <label for="colorPicker">Choose a Theme</label>
+          <input type="color" id="colorPicker" />
+        </div>
+
+        <button onclick="generateClassroom()">Generate</button>
+      </div>
+    </div>
+
+    <script src="./src/scripts/main.js"></script>
+    <script src="./src/scripts/functions.js"></script>
+    <script src="./src/scripts/experiment.js"></script>
+  </body>
+</html>
